@@ -249,7 +249,49 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+    }
+
+    .report-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: -6px;
+      margin-bottom: 18px;
+    }
+
+    .report-btn-month {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 13px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 12.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+      text-align: center;
+    }
+
+    .report-btn-year {
+      background: #ffffff;
+      color: var(--emerald-dark);
+      border: 1.5px solid #a7f3d0;
+      border-radius: var(--radius-md);
+      padding: 13px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 12.5px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
     .quick-btn-primary {
@@ -286,48 +328,17 @@
       box-shadow: var(--shadow);
     }
 
-    .herb-card {
-      background: var(--surface);
-      border: 1.5px solid #fecaca;
-      border-radius: var(--radius-lg);
-      padding: 16px;
-      box-shadow: var(--shadow);
-      margin-bottom: 18px;
-    }
-
-    .herb-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .herb-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #fee2e2;
-      color: var(--danger-dark);
-      font-size: 11.5px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      margin-bottom: 4px;
-    }
-
     .btn-red-doc {
       background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
       color: #fff;
       border: none;
       border-radius: var(--radius-sm);
-      padding: 10px 14px;
+      padding: 9px 12px;
       font-weight: 700;
-      font-size: 12.5px;
+      font-size: 12px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
     }
@@ -522,8 +533,8 @@
       justify-content: space-between;
       align-items: center;
       gap: 8px;
-      cursor: pointer;
-      margin-bottom: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
     }
 
     .month-chart-title {
@@ -665,20 +676,28 @@
       font-weight: 600;
     }
 
+    .report-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+
     .report-table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
-      margin-top: 10px;
-      margin-bottom: 14px;
-      font-size: 12px;
+      font-size: 11.5px;
     }
 
     .report-table th,
     .report-table td {
       border: 1px solid #cbd5e1;
-      padding: 7px 8px;
+      padding: 6px 7px;
       text-align: left;
       vertical-align: top;
+      word-break: break-word;
     }
 
     .report-table th {
@@ -690,6 +709,26 @@
     .num-right {
       text-align: right;
       white-space: nowrap;
+    }
+
+    .report-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      font-size: 11.5px;
+      margin-bottom: 12px;
+    }
+
+    .report-summary-box {
+      border-radius: 8px;
+      padding: 8px;
+      min-width: 0;
+    }
+
+    .report-summary-val {
+      font-weight: 700;
+      font-size: 12.5px;
+      word-break: break-word;
     }
 
     .bottom-nav {
@@ -773,21 +812,6 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     }
 
-    .demo-bar {
-      background: #fffbeb;
-      border: 1px solid #fde68a;
-      color: #92400e;
-      border-radius: var(--radius-md);
-      padding: 10px 12px;
-      margin-bottom: 14px;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
     .alert-banner {
       background: #fef2f2;
       border: 1px solid #fecaca;
@@ -821,7 +845,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 14px;
+      padding: 10px;
     }
 
     .modal-card {
@@ -829,30 +853,34 @@
       border-radius: var(--radius-lg);
       max-width: 680px;
       width: 100%;
-      max-height: 90vh;
+      max-height: 88vh;
       overflow-y: auto;
-      padding: 20px;
+      overflow-x: hidden;
+      padding: 14px;
     }
 
     .voucher {
       border: 1.5px solid #1f2937;
       border-radius: 8px;
-      padding: 18px;
+      padding: 12px;
       background: #fff;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .sig-row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 28px;
+      gap: 10px;
+      margin-top: 22px;
       text-align: center;
-      font-size: 11.5px;
+      font-size: 11px;
     }
 
     .sig-line {
       border-top: 1px dashed #6b7280;
-      margin-top: 34px;
+      margin-top: 28px;
       padding-top: 4px;
     }
 
@@ -883,6 +911,15 @@
       max-height: 220px;
       overflow: auto;
       white-space: pre;
+    }
+
+    @media (max-width: 480px) {
+      .report-summary-grid {
+        grid-template-columns: 1fr;
+      }
+      .report-quick-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media print {
@@ -965,14 +1002,6 @@
 
       <!-- TAB 1: HOME -->
       <section id="tab-home">
-        <div class="demo-bar">
-          <div><strong>ໂໝດທົດສອບພ້ອມໃຊ້ງານ:</strong> ເພີ່ມລາຍການ, ອະນຸມັດ, ເບິ່ງ Chart ລາຍຮັບ-ລາຍຈ່າຍແຕ່ລະເດືອນ ແລະ ອອກເອກະສານໄດ້ທັນທີ</div>
-          <div style="display:flex; gap:6px; flex-wrap:wrap;">
-            <button type="button" class="btn btn-outline btn-sm" onclick="addSampleTx()">+ ທົດສອບເພີ່ມລາຍການ</button>
-            <button type="button" class="btn btn-outline btn-sm" onclick="resetDemoData()">ຣີເຊັດຂໍ້ມູນ</button>
-          </div>
-        </div>
-
         <div class="hero-card">
           <div class="hero-top">
             <div class="hero-title" id="heroGreeting">ບັນຊີຄົວເຮືອນ 👋</div>
@@ -1014,30 +1043,18 @@
           </button>
         </div>
 
-        <div class="herb-card">
-          <div class="herb-header">
-            <div>
-              <div class="herb-badge">📋 ລາຍຮັບ-ລາຍຈ່າຍຄົວເຮືອນ • ສະຫຼຸບລາຍເດືອນ &amp; ລາຍປີ</div>
-              <div style="font-weight:700; font-size:15px;">ບົດລາຍງານສະຫຼຸບລາຍຮັບ-ລາຍຈ່າຍ (ລາຍເດືອນ &amp; ລາຍປີ)</div>
-              <div style="font-size:12px; color:var(--muted);">ກົດປຸ່ມດ້ານລຸ່ມເພື່ອເປີດ ແລະ ດາວໂຫຼດບົດລາຍງານລາຍເດືອນ ຫຼື ລາຍປີ ເປັນຮູບ (PNG) / PDF / CSV</div>
-            </div>
-            <div style="display:flex; gap:6px; flex-wrap:wrap;">
-              <button type="button" class="btn-red-doc" onclick="openMonthlyExpenseReport(selectedExpenseMonth)">
-                <span>📄</span>
-                <span>ບົດລາຍງານລາຍເດືອນ</span>
-              </button>
-              <button type="button" class="btn btn-emerald btn-sm" style="padding:10px 14px;" onclick="openYearlyExpenseReport()">
-                <span>📊</span>
-                <span>ບົດລາຍງານລາຍປີ</span>
-              </button>
-            </div>
-          </div>
-
-          <div style="font-weight:700; font-size:13px; margin-bottom:6px;">ລາຍການລາຍຈ່າຍຫຼ້າສຸດ</div>
-          <div id="herbRecentList"></div>
+        <div class="report-quick-grid">
+          <button type="button" class="report-btn-month" onclick="openMonthlyExpenseReport(selectedExpenseMonth)">
+            <span>📄</span>
+            <span>ບົດລາຍງານລາຍເດືອນ</span>
+          </button>
+          <button type="button" class="report-btn-year" onclick="openYearlyExpenseReport()">
+            <span>📊</span>
+            <span>ບົດລາຍງານລາຍປີ</span>
+          </button>
         </div>
 
-        <div class="card" style="margin-top:16px;">
+        <div class="card" style="margin-top:12px;">
           <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
             <div style="font-weight:700; font-size:14.5px;">📊 Chart ແທ່ງແນວຕັ້ງ ລາຍຮັບ &amp; ລາຍຈ່າຍແຕ່ລະເດືອນ + ລາຍລະອຽດ</div>
             <button type="button" class="btn btn-outline btn-sm" onclick="pullSheet(true)">↻ ດຶງຂໍ້ມູນລ່າສຸດ</button>
@@ -1281,8 +1298,8 @@
 
   <div id="voucherModal" class="modal-bg hidden">
     <div class="modal-card">
-      <div class="no-print" style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
-        <strong>ໃບບິນເອກະສານ / ສະຫຼຸບລາຍຮັບ-ລາຍຈ່າຍ</strong>
+      <div class="no-print" style="display:flex; justify-content:space-between; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:10px;">
+        <strong style="font-size:13.5px;">ໃບບິນເອກະສານ / ສະຫຼຸບລາຍຮັບ-ລາຍຈ່າຍ</strong>
         <div style="display:flex; gap:6px; flex-wrap:wrap;">
           <button type="button" id="modalCsvBtn" class="btn btn-outline btn-sm hidden">Export CSV</button>
           <button type="button" class="btn btn-emerald btn-sm" onclick="downloadVoucherImage()">ດາວໂຫຼດຮູບ (PNG)</button>
@@ -1303,7 +1320,7 @@
   <div id="toast" class="toast hidden"></div>
 
   <script>
-    const STORAGE_KEY = 'household_finance_mobile_v7';
+    const STORAGE_KEY = 'household_finance_mobile_v8';
     const EMBEDDED_SHEET_URL = '';
 
     const SCRIPT_TEMPLATE = `const SHEET_ID = SpreadsheetApp.getActiveSpreadsheet().getId();
@@ -2019,29 +2036,6 @@ function doPost(e) {
           selectedExpenseMonth = '11';
         }
 
-        setHtml(
-          'herbRecentList',
-          scopedExpenses.length
-            ? scopedExpenses
-                .slice(0, 3)
-                .map(
-                  (it) => `
-                <div class="month-item-row">
-                  <div>
-                    <div style="font-weight:700; color:var(--text);">${it.title}</div>
-                    <div style="font-size:11.5px; color:var(--muted);">${it.date} • ${it.category} • ${it.requester}${it.note ? ' • ' + it.note : ''}</div>
-                  </div>
-                  <div style="text-align:right; white-space:nowrap;">
-                    <div style="font-weight:700; color:var(--danger);">-${kip(it.amount)}</div>
-                    <div style="margin-top:2px;">${statusBadge(it.status)}</div>
-                  </div>
-                </div>
-              `
-                )
-                .join('')
-            : '<div class="empty-state" style="padding:12px;">ຍັງບໍ່ມີລາຍການລາຍຈ່າຍໃນປີນີ້</div>'
-        );
-
         const mNames = ['ມ.ກ.', 'ກ.ພ.', 'ມີ.ນ.', 'ເມ.ສ.', 'ພ.ພ.', 'ມິ.ຖ.', 'ກ.ລ.', 'ສ.ຫ.', 'ກ.ຍ.', 'ຕ.ລ.', 'ພ.ຈ.', 'ທ.ວ.'];
         const monthBuckets = mNames.map((label, idx) => {
           const monthStr = String(idx + 1).padStart(2, '0');
@@ -2235,7 +2229,7 @@ function doPost(e) {
 
         const selectedDetailCardHtml = `
           <div class="month-chart-card selected">
-            <div class="month-chart-head" style="cursor:default;">
+            <div class="month-chart-head">
               <div class="month-chart-title">
                 <span>📌 ເດືອນ ${activeBucket.label} ${yr}</span>
                 <span style="font-size:11.5px; font-weight:500; color:var(--muted);">(${activeBucket.totalCount} ລາຍການ • ສຸດທິ ${activeBucket.net >= 0 ? '+' : ''}${kip(activeBucket.net)})</span>
@@ -2552,16 +2546,16 @@ function doPost(e) {
         `
         <div class="voucher">
           <div style="text-align:center; border-bottom:1.5px solid #1f2937; padding-bottom:8px; margin-bottom:12px;">
-            <div style="font-size:16px; font-weight:700;">${titleDoc}</div>
-            <div style="font-size:12px; color:var(--muted);">ເລກທີ: ${t.code} • ວັນທີ: ${t.date}</div>
+            <div style="font-size:15.5px; font-weight:700;">${titleDoc}</div>
+            <div style="font-size:11.5px; color:var(--muted);">ເລກທີ: ${t.code} • ວັນທີ: ${t.date}</div>
           </div>
-          <p><strong>ລາຍການ:</strong> ${t.title}</p>
-          <p><strong>ໝວດໝູ່:</strong> ${t.category}</p>
-          <p><strong>ຈຳນວນເງິນ:</strong> <strong>${kip(t.amount)}</strong></p>
-          <p><strong>ສະຖານະ:</strong> ${statusLabel(t.status)}</p>
-          <p><strong>${isIncome ? 'ຜູ້ບັນທຶກລາຍຮັບ / ຜູ້ສະຫຼຸບ' : 'ຜູ້ຂໍເບີກຈ່າຍ / ຜູ້ສະຫຼຸບ'}:</strong> ${t.requester}</p>
-          ${t.note ? `<p><strong>ໝາຍເຫດ:</strong> ${t.note}</p>` : ''}
-          ${isIncome ? '' : `<p><strong>ຜູ້ອະນຸມັດ/ຮັບຮອງ:</strong> ${t.approver || '....................'}</p>`}
+          <p style="margin-bottom:4px;"><strong>ລາຍການ:</strong> ${t.title}</p>
+          <p style="margin-bottom:4px;"><strong>ໝວດໝູ່:</strong> ${t.category}</p>
+          <p style="margin-bottom:4px;"><strong>ຈຳນວນເງິນ:</strong> <strong>${kip(t.amount)}</strong></p>
+          <p style="margin-bottom:4px;"><strong>ສະຖານະ:</strong> ${statusLabel(t.status)}</p>
+          <p style="margin-bottom:4px;"><strong>${isIncome ? 'ຜູ້ບັນທຶກລາຍຮັບ / ຜູ້ສະຫຼຸບ' : 'ຜູ້ຂໍເບີກຈ່າຍ / ຜູ້ສະຫຼຸບ'}:</strong> ${t.requester}</p>
+          ${t.note ? `<p style="margin-bottom:4px;"><strong>ໝາຍເຫດ:</strong> ${t.note}</p>` : ''}
+          ${isIncome ? '' : `<p style="margin-bottom:4px;"><strong>ຜູ້ອະນຸມັດ/ຮັບຮອງ:</strong> ${t.approver || '....................'}</p>`}
           ${sigBlock}
         </div>
       `
@@ -2634,9 +2628,9 @@ function doPost(e) {
 
       const budgetStatusBannerHtml = overIncomeAmount > 0
         ? `
-          <div style="background:#fef2f2; border:1.5px solid #dc2626; border-radius:8px; padding:10px 12px; margin-bottom:12px; color:#991b1b;">
-            <div style="font-weight:700; font-size:13px; margin-bottom:4px;">⚠️ ແຈ້ງເຕືອນ: ລາຍຈ່າຍເກີນງົບລາຍຮັບປະຈຳເດືອນ ${kip(overIncomeAmount)}</div>
-            <div style="font-size:12px;">
+          <div style="background:#fef2f2; border:1.5px solid #dc2626; border-radius:8px; padding:9px 10px; margin-bottom:10px; color:#991b1b;">
+            <div style="font-weight:700; font-size:12.5px; margin-bottom:3px;">⚠️ ແຈ້ງເຕືອນ: ລາຍຈ່າຍເກີນງົບລາຍຮັບປະຈຳເດືອນ ${kip(overIncomeAmount)}</div>
+            <div style="font-size:11.5px;">
               ລາຍຈ່າຍລວມ (${kip(totalMonthExp)}) ສູງກວ່າລາຍຮັບປະຈຳເດືອນ (${kip(totalMonthInc)}) —
               ${overrunExpenseItems.length ? `ລາຍການທີ່ເຮັດໃຫ້ຍອດທະລຸງົບລາຍຮັບ: <strong>${overrunExpenseItems.map((x) => `${x.title} (${kip(x.amount)})`).join(', ')}</strong>` : ''}
             </div>
@@ -2644,55 +2638,57 @@ function doPost(e) {
         `
         : overrunCategories.length > 0
           ? `
-            <div style="background:#fffbeb; border:1.5px solid #d97706; border-radius:8px; padding:10px 12px; margin-bottom:12px; color:#92400e;">
-              <div style="font-weight:700; font-size:13px; margin-bottom:4px;">⚠️ ສະຫຼຸບໝວດທີ່ໃຊ້ຈ່າຍສູງເກີນສັດສ່ວນງົບລາຍຮັບ (ແຕ່ຍອດລວມຍັງບໍ່ເກີນລາຍຮັບ)</div>
-              <div style="font-size:12px;">
-                ${overrunCategories.map((c) => `• <strong>${c.cat}</strong>: ຈ່າຍ ${kip(c.amt)} (${c.pctOfIncome}% ຂອງລາຍຮັບ, ເກີນເກນແນະນຳ ${kip(c.excess)})`).join('<br/>')}
+            <div style="background:#fffbeb; border:1.5px solid #d97706; border-radius:8px; padding:9px 10px; margin-bottom:10px; color:#92400e;">
+              <div style="font-weight:700; font-size:12.5px; margin-bottom:3px;">⚠️ ສະຫຼຸບໝວດທີ່ໃຊ້ຈ່າຍສູງເກີນສັດສ່ວນງົບລາຍຮັບ</div>
+              <div style="font-size:11.5px;">
+                ${overrunCategories.map((c) => `• <strong>${c.cat}</strong>: ຈ່າຍ ${kip(c.amt)} (${c.pctOfIncome}% ຂອງລາຍຮັບ, ເກີນເກນ ${kip(c.excess)})`).join('<br/>')}
               </div>
             </div>
           `
           : `
-            <div style="background:#ecfdf5; border:1.5px solid #059669; border-radius:8px; padding:10px 12px; margin-bottom:12px; color:#065f46;">
-              <div style="font-weight:700; font-size:13px;">✅ ສະຖານະງົບປະມານ: ລາຍຈ່າຍຢູ່ໃນຂອບເຂດງົບລາຍຮັບ (ຄົງເຫຼືອ +${kip(netMonth)})</div>
+            <div style="background:#ecfdf5; border:1.5px solid #059669; border-radius:8px; padding:9px 10px; margin-bottom:10px; color:#065f46;">
+              <div style="font-weight:700; font-size:12.5px;">✅ ສະຖານະງົບປະມານ: ລາຍຈ່າຍຢູ່ໃນຂອບເຂດງົບລາຍຮັບ (ຄົງເຫຼືອ +${kip(netMonth)})</div>
             </div>
           `;
 
       const catSummaryHtml = Object.keys(catTotals).length
         ? `
-          <div style="font-weight:700; font-size:13px; margin-top:8px;">1. ສະຫຼຸບລາຍຈ່າຍແຍກຕາມໝວດໝູ່ &amp; ທຽບງົບລາຍຮັບ (${monthName} ${yr})</div>
-          <table class="report-table">
-            <thead>
-              <tr>
-                <th>ໝວດໝູ່ລາຍຈ່າຍ</th>
-                <th class="num-right">ເກນງົບຕາມລາຍຮັບ</th>
-                <th class="num-right">ຍອດຈ່າຍຕົວຈິງ</th>
-                <th>ຜົນການກວດສອບ</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${Object.entries(catTotals)
-                .map(([cat, amt]) => {
-                  const ratio = categoryShareRules[cat] || 0.15;
-                  const catLimit = Math.round(totalMonthInc * ratio);
-                  const isOverTotal = totalMonthInc === 0 || amt > totalMonthInc;
-                  const isOverCat = catLimit > 0 && amt > catLimit;
-                  const statusCol = isOverTotal
-                    ? `<span style="color:#dc2626; font-weight:700;">⚠️ ເກີນງົບລາຍຮັບລວມ (+${kip(amt - totalMonthInc)})</span>`
-                    : isOverCat
-                      ? `<span style="color:#d97706; font-weight:700;">⚠️ ເກີນສັດສ່ວນໝວດ (+${kip(amt - catLimit)})</span>`
-                      : `<span style="color:#059669; font-weight:600;">✅ ປົກກະຕິ</span>`;
-                  return `
-                    <tr style="${isOverTotal ? 'background:#fef2f2;' : isOverCat ? 'background:#fffbeb;' : ''}">
-                      <td><strong>${cat}</strong></td>
-                      <td class="num-right">${kip(catLimit)} (${Math.round(ratio * 100)}%)</td>
-                      <td class="num-right"><strong>${kip(amt)}</strong></td>
-                      <td>${statusCol}</td>
-                    </tr>
-                  `;
-                })
-                .join('')}
-            </tbody>
-          </table>
+          <div style="font-weight:700; font-size:12.5px; margin-top:8px;">1. ສະຫຼຸບລາຍຈ່າຍແຍກຕາມໝວດໝູ່ &amp; ທຽບງົບລາຍຮັບ (${monthName} ${yr})</div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>ໝວດໝູ່</th>
+                  <th class="num-right">ເກນງົບ</th>
+                  <th class="num-right">ຈ່າຍຕົວຈິງ</th>
+                  <th>ກວດສອບ</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${Object.entries(catTotals)
+                  .map(([cat, amt]) => {
+                    const ratio = categoryShareRules[cat] || 0.15;
+                    const catLimit = Math.round(totalMonthInc * ratio);
+                    const isOverTotal = totalMonthInc === 0 || amt > totalMonthInc;
+                    const isOverCat = catLimit > 0 && amt > catLimit;
+                    const statusCol = isOverTotal
+                      ? `<span style="color:#dc2626; font-weight:700;">⚠️ ເກີນລາຍຮັບ (+${kip(amt - totalMonthInc)})</span>`
+                      : isOverCat
+                        ? `<span style="color:#d97706; font-weight:700;">⚠️ ເກີນໝວດ (+${kip(amt - catLimit)})</span>`
+                        : `<span style="color:#059669; font-weight:600;">✅ ປົກກະຕິ</span>`;
+                    return `
+                      <tr style="${isOverTotal ? 'background:#fef2f2;' : isOverCat ? 'background:#fffbeb;' : ''}">
+                        <td><strong>${cat}</strong></td>
+                        <td class="num-right">${kip(catLimit)} (${Math.round(ratio * 100)}%)</td>
+                        <td class="num-right"><strong>${kip(amt)}</strong></td>
+                        <td>${statusCol}</td>
+                      </tr>
+                    `;
+                  })
+                  .join('')}
+              </tbody>
+            </table>
+          </div>
         `
         : '';
 
@@ -2702,8 +2698,8 @@ function doPost(e) {
               (it, idx) => `
             <tr>
               <td>${idx + 1}</td>
-              <td>${it.date}<div style="font-size:11px; color:var(--muted);">${it.code}</div></td>
-              <td><strong>${it.title}</strong>${it.note ? `<div style="font-size:11px; color:var(--muted);">${it.note}</div>` : ''}</td>
+              <td>${it.date}<div style="font-size:10.5px; color:var(--muted);">${it.code}</div></td>
+              <td><strong>${it.title}</strong>${it.note ? `<div style="font-size:10.5px; color:var(--muted);">${it.note}</div>` : ''}</td>
               <td>${it.category}</td>
               <td>${it.requester}</td>
               <td class="num-right" style="color:var(--success);"><strong>+${kip(it.amount)}</strong></td>
@@ -2722,11 +2718,11 @@ function doPost(e) {
               return `
                 <tr style="${pushesOverIncome ? 'background:#fef2f2;' : ''}">
                   <td>${idx + 1}</td>
-                  <td>${it.date}<div style="font-size:11px; color:var(--muted);">${it.code}</div></td>
+                  <td>${it.date}<div style="font-size:10.5px; color:var(--muted);">${it.code}</div></td>
                   <td>
                     <strong>${it.title}</strong>
-                    ${pushesOverIncome ? `<div style="font-size:11px; color:#dc2626; font-weight:700;">⚠️ ເກີນງົບລາຍຮັບ (ສະສົມ ${kip(cumulativeExpCheck)})</div>` : ''}
-                    ${it.note ? `<div style="font-size:11px; color:var(--muted);">${it.note}</div>` : ''}
+                    ${pushesOverIncome ? `<div style="font-size:10.5px; color:#dc2626; font-weight:700;">⚠️ ເກີນງົບລາຍຮັບ (ສະສົມ ${kip(cumulativeExpCheck)})</div>` : ''}
+                    ${it.note ? `<div style="font-size:10.5px; color:var(--muted);">${it.note}</div>` : ''}
                   </td>
                   <td>${it.category}</td>
                   <td>${it.requester}</td>
@@ -2781,7 +2777,7 @@ function doPost(e) {
       currentDocExportSpec = {
         filename: `monthly-statement-${yr}-${safeMonth}.png`,
         accent: '#0f6b4f',
-        title: `ໃບສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍຄົວເຮືອນ ປະຈຳເດືອນ ${monthName} ${yr}`,
+        title: `ໃບສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ ປະຈຳເດືອນ ${monthName} ${yr}`,
         subtitle: `ລະບົບບັນຊີຄົວເຮືອນ • ${getExpenseScopeLabel(scope)}`,
         summaryCards: [
           { label: 'ລາຍຮັບປະຈຳເດືອນ', value: `+${kip(totalMonthInc)}`, color: '#059669', bg: '#ecfdf5' },
@@ -2804,74 +2800,78 @@ function doPost(e) {
         'voucherPrintBody',
         `
         <div class="voucher">
-          <div style="text-align:center; border-bottom:2px solid #0f6b4f; padding-bottom:10px; margin-bottom:12px;">
-            <div style="font-size:17px; font-weight:700; color:#0f6b4f;">ໃບສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍຄົວເຮືອນ ປະຈຳເດືອນ ${monthName} ${yr}</div>
-            <div style="font-size:12px; color:var(--muted);">ລະບົບບັນຊີຄົວເຮືອນ • ຂອບເຂດ: ${getExpenseScopeLabel(scope)}</div>
+          <div style="text-align:center; border-bottom:2px solid #0f6b4f; padding-bottom:8px; margin-bottom:10px;">
+            <div style="font-size:15.5px; font-weight:700; color:#0f6b4f;">ໃບສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ ປະຈຳເດືອນ ${monthName} ${yr}</div>
+            <div style="font-size:11px; color:var(--muted);">ລະບົບບັນຊີຄົວເຮືອນ • ${getExpenseScopeLabel(scope)}</div>
           </div>
 
-          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; font-size:12px; margin-bottom:12px;">
-            <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:8px 10px;">
-              <div style="color:#065f46;">ລາຍຮັບປະຈຳເດືອນ</div>
-              <div style="font-weight:700; font-size:14px; color:#059669;">+${kip(totalMonthInc)}</div>
-              <div style="font-size:11px; color:#065f46;">(${monthIncomeItems.length} ລາຍການ)</div>
+          <div class="report-summary-grid">
+            <div class="report-summary-box" style="background:#ecfdf5; border:1px solid #a7f3d0;">
+              <div style="color:#065f46;">ລາຍຮັບເດືອນ</div>
+              <div class="report-summary-val" style="color:#059669;">+${kip(totalMonthInc)}</div>
+              <div style="font-size:10.5px; color:#065f46;">(${monthIncomeItems.length} ລາຍການ)</div>
             </div>
-            <div style="background:#fff5f5; border:1px solid #fecaca; border-radius:8px; padding:8px 10px;">
-              <div style="color:#991b1b;">ລາຍຈ່າຍປະຈຳເດືອນ</div>
-              <div style="font-weight:700; font-size:14px; color:#dc2626;">-${kip(totalMonthExp)}</div>
-              <div style="font-size:11px; color:#991b1b;">(${monthExpenseItems.length} ລາຍການ)</div>
+            <div class="report-summary-box" style="background:#fff5f5; border:1px solid #fecaca;">
+              <div style="color:#991b1b;">ລາຍຈ່າຍເດືອນ</div>
+              <div class="report-summary-val" style="color:#dc2626;">-${kip(totalMonthExp)}</div>
+              <div style="font-size:10.5px; color:#991b1b;">(${monthExpenseItems.length} ລາຍການ)</div>
             </div>
-            <div style="background:${netMonth >= 0 ? '#f0fdf4' : '#fef2f2'}; border:1px solid ${netMonth >= 0 ? '#86efac' : '#fca5a5'}; border-radius:8px; padding:8px 10px;">
-              <div style="color:#1f2937;">ຍອດຄົງເຫຼືອ / ເກີນງົບ</div>
-              <div style="font-weight:700; font-size:14px; color:${netMonth >= 0 ? '#059669' : '#dc2626'};">${netMonth >= 0 ? '+' : ''}${kip(netMonth)}</div>
-              <div style="font-size:11px; color:${netMonth >= 0 ? '#065f46' : '#991b1b'};">${overIncomeAmount > 0 ? 'ເກີນງົບ ' + kip(overIncomeAmount) : 'ຢູ່ໃນງົບລາຍຮັບ'}</div>
+            <div class="report-summary-box" style="background:${netMonth >= 0 ? '#f0fdf4' : '#fef2f2'}; border:1px solid ${netMonth >= 0 ? '#86efac' : '#fca5a5'};">
+              <div style="color:#1f2937;">${overIncomeAmount > 0 ? 'ເກີນງົບ' : 'ຄົງເຫຼືອ'}</div>
+              <div class="report-summary-val" style="color:${netMonth >= 0 ? '#059669' : '#dc2626'};">${netMonth >= 0 ? '+' : ''}${kip(netMonth)}</div>
+              <div style="font-size:10.5px; color:${netMonth >= 0 ? '#065f46' : '#991b1b'};">${overIncomeAmount > 0 ? 'ເກີນ ' + kip(overIncomeAmount) : 'ຢູ່ໃນງົບ'}</div>
             </div>
           </div>
 
           ${budgetStatusBannerHtml}
           ${catSummaryHtml}
 
-          <div style="font-weight:700; font-size:13px; margin-top:10px; color:#065f46;">2. ລາຍລະອຽດລາຍຮັບປະຈຳເດືອນ ${monthName} ${yr}</div>
-          <table class="report-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>ວັນທີ / ເລກທີ</th>
-                <th>ລາຍການລາຍຮັບ</th>
-                <th>ໝວດໝູ່</th>
-                <th>ຜູ້ບັນທຶກ</th>
-                <th class="num-right">ຈຳນວນເງິນ</th>
-              </tr>
-            </thead>
-            <tbody>${incomeRowsHtml}</tbody>
-            <tfoot>
-              <tr>
-                <th colspan="5" class="num-right">ລວມລາຍຮັບເດືອນ ${monthName} ${yr}</th>
-                <th class="num-right" style="color:var(--success);">+${kip(totalMonthInc)}</th>
-              </tr>
-            </tfoot>
-          </table>
+          <div style="font-weight:700; font-size:12.5px; margin-top:10px; color:#065f46;">2. ລາຍລະອຽດລາຍຮັບປະຈຳເດືອນ ${monthName} ${yr}</div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>ວັນທີ / ເລກທີ</th>
+                  <th>ລາຍການລາຍຮັບ</th>
+                  <th>ໝວດໝູ່</th>
+                  <th>ຜູ້ບັນທຶກ</th>
+                  <th class="num-right">ຈຳນວນເງິນ</th>
+                </tr>
+              </thead>
+              <tbody>${incomeRowsHtml}</tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="5" class="num-right">ລວມລາຍຮັບເດືອນ ${monthName} ${yr}</th>
+                  <th class="num-right" style="color:var(--success);">+${kip(totalMonthInc)}</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
 
-          <div style="font-weight:700; font-size:13px; margin-top:10px; color:#991b1b;">3. ລາຍລະອຽດການໃຊ້ຈ່າຍປະຈຳເດືອນ ${monthName} ${yr}</div>
-          <table class="report-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>ວັນທີ / ເລກທີ</th>
-                <th>ລາຍການທີ່ຊື້ / ໃຊ້ຈ່າຍ</th>
-                <th>ໝວດໝູ່</th>
-                <th>ຜູ້ຂໍເບີກ</th>
-                <th>ສະຖານະ</th>
-                <th class="num-right">ຈຳນວນເງິນ</th>
-              </tr>
-            </thead>
-            <tbody>${monthRowsHtml}</tbody>
-            <tfoot>
-              <tr>
-                <th colspan="6" class="num-right">ລວມລາຍຈ່າຍເດືອນ ${monthName} ${yr}</th>
-                <th class="num-right" style="color:var(--danger);">-${kip(totalMonthExp)}</th>
-              </tr>
-            </tfoot>
-          </table>
+          <div style="font-weight:700; font-size:12.5px; margin-top:10px; color:#991b1b;">3. ລາຍລະອຽດການໃຊ້ຈ່າຍປະຈຳເດືອນ ${monthName} ${yr}</div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>ວັນທີ / ເລກທີ</th>
+                  <th>ລາຍການທີ່ຊື້ / ໃຊ້ຈ່າຍ</th>
+                  <th>ໝວດໝູ່</th>
+                  <th>ຜູ້ຂໍເບີກ</th>
+                  <th>ສະຖານະ</th>
+                  <th class="num-right">ຈຳນວນເງິນ</th>
+                </tr>
+              </thead>
+              <tbody>${monthRowsHtml}</tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="6" class="num-right">ລວມລາຍຈ່າຍເດືອນ ${monthName} ${yr}</th>
+                  <th class="num-right" style="color:var(--danger);">-${kip(totalMonthExp)}</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
 
           <div class="sig-row">
             <div><div>ຜູ້ອະນຸມັດ/ຮັບຮອງ</div><div class="sig-line">................</div></div>
@@ -2927,7 +2927,7 @@ function doPost(e) {
             <td class="num-right" style="color:var(--success);">+${kip(r.mInc)}</td>
             <td class="num-right" style="color:var(--danger);">-${kip(r.mExp)}</td>
             <td class="num-right" style="color:${r.mNet >= 0 ? 'var(--success)' : 'var(--danger)'};"><strong>${r.mNet >= 0 ? '+' : ''}${kip(r.mNet)}</strong></td>
-            <td>${r.mExp > r.mInc && r.mExp > 0 ? '<span style="color:#dc2626; font-weight:700;">⚠️ ເກີນງົບເດືອນ</span>' : '<span style="color:#059669;">✅ ປົກກະຕິ</span>'}</td>
+            <td>${r.mExp > r.mInc && r.mExp > 0 ? '<span style="color:#dc2626; font-weight:700;">⚠️ ເກີນງົບ</span>' : '<span style="color:#059669;">✅ ປົກກະຕິ</span>'}</td>
           </tr>
         `
         )
@@ -2940,7 +2940,7 @@ function doPost(e) {
             <tr>
               <td><strong>${cat}</strong></td>
               <td class="num-right"><strong>${kip(amt)}</strong></td>
-              <td class="num-right">${totalYearInc > 0 ? Math.round((amt / totalYearInc) * 100) + '% ຂອງລາຍຮັບປີ' : '-'}</td>
+              <td class="num-right">${totalYearInc > 0 ? Math.round((amt / totalYearInc) * 100) + '%' : '-'}</td>
             </tr>
           `
             )
@@ -2950,12 +2950,12 @@ function doPost(e) {
       currentDocExportSpec = {
         filename: `yearly-statement-${yr}.png`,
         accent: '#0f6b4f',
-        title: `ບົດລາຍງານສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍປະຈຳປີ ${yr}`,
+        title: `ບົດລາຍງານສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ ປະຈຳປີ ${yr}`,
         subtitle: `ລະບົບບັນຊີຄົວເຮືອນ • ${getExpenseScopeLabel(scope)}`,
         summaryCards: [
           { label: `ລາຍຮັບລວມປີ ${yr}`, value: `+${kip(totalYearInc)}`, color: '#059669', bg: '#ecfdf5' },
           { label: `ລາຍຈ່າຍລວມປີ ${yr}`, value: `-${kip(totalYearExp)}`, color: '#dc2626', bg: '#fff5f5' },
-          { label: overYearAmount > 0 ? 'ເກີນງົບລາຍປີ' : 'ຍອດຄົງເຫຼືອປະຈຳປີ', value: `${netYear >= 0 ? '+' : ''}${kip(netYear)}`, color: netYear >= 0 ? '#059669' : '#dc2626', bg: netYear >= 0 ? '#f0fdf4' : '#fef2f2' }
+          { label: overYearAmount > 0 ? 'ເກີນງົບລາຍປີ' : 'ຍອດຄົງເຫຼືອ', value: `${netYear >= 0 ? '+' : ''}${kip(netYear)}`, color: netYear >= 0 ? '#059669' : '#dc2626', bg: netYear >= 0 ? '#f0fdf4' : '#fef2f2' }
         ],
         alertText: overYearAmount > 0
           ? `⚠️ ແຈ້ງເຕືອນ: ລາຍຈ່າຍປະຈຳປີເກີນລາຍຮັບ ${kip(overYearAmount)}`
@@ -2987,63 +2987,67 @@ function doPost(e) {
         'voucherPrintBody',
         `
         <div class="voucher">
-          <div style="text-align:center; border-bottom:2px solid #0f6b4f; padding-bottom:10px; margin-bottom:12px;">
-            <div style="font-size:17px; font-weight:700; color:#0f6b4f;">ບົດລາຍງານສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍຄົວເຮືອນ ປະຈຳປີ ${yr}</div>
-            <div style="font-size:12px; color:var(--muted);">ລະບົບບັນຊີຄົວເຮືອນ • ຂອບເຂດ: ${getExpenseScopeLabel(scope)}</div>
+          <div style="text-align:center; border-bottom:2px solid #0f6b4f; padding-bottom:8px; margin-bottom:10px;">
+            <div style="font-size:15.5px; font-weight:700; color:#0f6b4f;">ບົດລາຍງານສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ ປະຈຳປີ ${yr}</div>
+            <div style="font-size:11px; color:var(--muted);">ລະບົບບັນຊີຄົວເຮືອນ • ${getExpenseScopeLabel(scope)}</div>
           </div>
 
-          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; font-size:12px; margin-bottom:12px;">
-            <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:8px 10px;">
+          <div class="report-summary-grid">
+            <div class="report-summary-box" style="background:#ecfdf5; border:1px solid #a7f3d0;">
               <div style="color:#065f46;">ລາຍຮັບລວມປີ ${yr}</div>
-              <div style="font-weight:700; font-size:14px; color:#059669;">+${kip(totalYearInc)}</div>
-              <div style="font-size:11px; color:#065f46;">(${yearIncomes.length} ລາຍການ)</div>
+              <div class="report-summary-val" style="color:#059669;">+${kip(totalYearInc)}</div>
+              <div style="font-size:10.5px; color:#065f46;">(${yearIncomes.length} ລາຍການ)</div>
             </div>
-            <div style="background:#fff5f5; border:1px solid #fecaca; border-radius:8px; padding:8px 10px;">
+            <div class="report-summary-box" style="background:#fff5f5; border:1px solid #fecaca;">
               <div style="color:#991b1b;">ລາຍຈ່າຍລວມປີ ${yr}</div>
-              <div style="font-weight:700; font-size:14px; color:#dc2626;">-${kip(totalYearExp)}</div>
-              <div style="font-size:11px; color:#991b1b;">(${yearExpenses.length} ລາຍການ)</div>
+              <div class="report-summary-val" style="color:#dc2626;">-${kip(totalYearExp)}</div>
+              <div style="font-size:10.5px; color:#991b1b;">(${yearExpenses.length} ລາຍການ)</div>
             </div>
-            <div style="background:${netYear >= 0 ? '#f0fdf4' : '#fef2f2'}; border:1px solid ${netYear >= 0 ? '#86efac' : '#fca5a5'}; border-radius:8px; padding:8px 10px;">
-              <div style="color:#1f2937;">ຍອດຄົງເຫຼືອປະຈຳປີ</div>
-              <div style="font-weight:700; font-size:14px; color:${netYear >= 0 ? '#059669' : '#dc2626'};">${netYear >= 0 ? '+' : ''}${kip(netYear)}</div>
-              <div style="font-size:11px; color:${netYear >= 0 ? '#065f46' : '#991b1b'};">${overYearAmount > 0 ? 'ເກີນງົບ ' + kip(overYearAmount) : 'ຢູ່ໃນງົບລາຍຮັບ'}</div>
+            <div class="report-summary-box" style="background:${netYear >= 0 ? '#f0fdf4' : '#fef2f2'}; border:1px solid ${netYear >= 0 ? '#86efac' : '#fca5a5'};">
+              <div style="color:#1f2937;">${overYearAmount > 0 ? 'ເກີນງົບ' : 'ຄົງເຫຼືອ'}</div>
+              <div class="report-summary-val" style="color:${netYear >= 0 ? '#059669' : '#dc2626'};">${netYear >= 0 ? '+' : ''}${kip(netYear)}</div>
+              <div style="font-size:10.5px; color:${netYear >= 0 ? '#065f46' : '#991b1b'};">${overYearAmount > 0 ? 'ເກີນ ' + kip(overYearAmount) : 'ຢູ່ໃນງົບ'}</div>
             </div>
           </div>
 
-          <div style="font-weight:700; font-size:13px; margin-top:8px;">1. ຕາຕະລາງສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ 12 ເດືອນ (ປີ ${yr})</div>
-          <table class="report-table">
-            <thead>
-              <tr>
-                <th>ເດືອນ</th>
-                <th class="num-right">ລາຍຮັບ</th>
-                <th class="num-right">ລາຍຈ່າຍ</th>
-                <th class="num-right">ຍອດສຸດທິ</th>
-                <th>ສະຖານະງົບ</th>
-              </tr>
-            </thead>
-            <tbody>${monthTableHtml}</tbody>
-            <tfoot>
-              <tr>
-                <th>ລວມທັງປີ ${yr}</th>
-                <th class="num-right" style="color:var(--success);">+${kip(totalYearInc)}</th>
-                <th class="num-right" style="color:var(--danger);">-${kip(totalYearExp)}</th>
-                <th class="num-right" style="color:${netYear >= 0 ? 'var(--success)' : 'var(--danger)'};">${netYear >= 0 ? '+' : ''}${kip(netYear)}</th>
-                <th></th>
-              </tr>
-            </tfoot>
-          </table>
+          <div style="font-weight:700; font-size:12.5px; margin-top:8px;">1. ສະຫຼຸບລາຍຮັບ - ລາຍຈ່າຍ 12 ເດືອນ (ປີ ${yr})</div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>ເດືອນ</th>
+                  <th class="num-right">ລາຍຮັບ</th>
+                  <th class="num-right">ລາຍຈ່າຍ</th>
+                  <th class="num-right">ສຸດທິ</th>
+                  <th>ງົບ</th>
+                </tr>
+              </thead>
+              <tbody>${monthTableHtml}</tbody>
+              <tfoot>
+                <tr>
+                  <th>ລວມປີ ${yr}</th>
+                  <th class="num-right" style="color:var(--success);">+${kip(totalYearInc)}</th>
+                  <th class="num-right" style="color:var(--danger);">-${kip(totalYearExp)}</th>
+                  <th class="num-right" style="color:${netYear >= 0 ? 'var(--success)' : 'var(--danger)'};">${netYear >= 0 ? '+' : ''}${kip(netYear)}</th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
 
-          <div style="font-weight:700; font-size:13px; margin-top:10px;">2. ສະຫຼຸບລາຍຈ່າຍປະຈຳປີ ${yr} ແຍກຕາມໝວດໝູ່</div>
-          <table class="report-table">
-            <thead>
-              <tr>
-                <th>ໝວດໝູ່ລາຍຈ່າຍ</th>
-                <th class="num-right">ຍອດຈ່າຍລວມ</th>
-                <th class="num-right">ສັດສ່ວນຕໍ່ລາຍຮັບປີ</th>
-              </tr>
-            </thead>
-            <tbody>${catRowsHtml}</tbody>
-          </table>
+          <div style="font-weight:700; font-size:12.5px; margin-top:10px;">2. ສະຫຼຸບລາຍຈ່າຍປະຈຳປີ ${yr} ແຍກຕາມໝວດໝູ່</div>
+          <div class="report-table-wrap">
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>ໝວດໝູ່</th>
+                  <th class="num-right">ຍອດຈ່າຍ</th>
+                  <th class="num-right">ສັດສ່ວນ</th>
+                </tr>
+              </thead>
+              <tbody>${catRowsHtml}</tbody>
+            </table>
+          </div>
 
           <div class="sig-row">
             <div><div>ຜູ້ອະນຸມັດ/ຮັບຮອງ</div><div class="sig-line">................</div></div>
@@ -3557,49 +3561,6 @@ function doPost(e) {
       } catch (err) {
         copyTextSafe(csvText, `ຄັດລອກຂໍ້ມູນ CSV ປີ ${yr} ແລ້ວ`);
       }
-    }
-
-    function addSampleTx() {
-      const u = me() || state.users[0];
-      const isExp = state.transactions.length % 2 === 0;
-      const nowDate = new Date().toISOString().slice(0, 10);
-      const code = nextCode(isExp ? 'expense' : 'income', nowDate);
-      state.transactions.unshift(
-        normalizeTransaction({
-          id: 't_' + Date.now(),
-          code,
-          type: isExp ? 'expense' : 'income',
-          status: isExp ? 'approved' : 'recorded',
-          title: isExp ? 'ທົດສອບຊື້ເຄື່ອງໃຊ້ ແລະ ອາຫານ' : 'ທົດສອບລາຍຮັບເພີ່ມເຕີມ',
-          amount: isExp ? 280000 : 1500000,
-          date: nowDate,
-          category: isExp ? 'ອາຫານ ແລະ ຂອງກິນ' : 'ລາຍຮັບອື່ນໆ',
-          requester: u ? u.displayName : 'ສະມາຊິກ 1',
-          approver: isExp && u ? u.displayName : '',
-          receiptNo: 'TEST-01',
-          note: 'ສ້າງຈາກປຸ່ມທົດສອບ'
-        })
-      );
-      const mPart = extractMonth({ date: nowDate });
-      if (mPart) {
-        selectedExpenseMonth = mPart;
-      }
-      logAction('ທົດສອບສ້າງລາຍການ', code);
-      saveState();
-      renderAll();
-      toast('ເພີ່ມລາຍການທົດສອບແລ້ວ');
-    }
-
-    function resetDemoData() {
-      showInlineConfirm('ຣີເຊັດຂໍ້ມູນທັງໝົດກັບເປັນຄ່າເລີ່ມຕົ້ນ?', () => {
-        const keepUser = state.currentUserId;
-        state = JSON.parse(JSON.stringify(defaultData));
-        state.currentUserId = keepUser;
-        selectedExpenseMonth = '11';
-        saveState();
-        renderAll();
-        toast('ຣີເຊັດຂໍ້ມູນແລ້ວ');
-      });
     }
 
     function renderAll() {
