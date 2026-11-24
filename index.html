@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>ບັນຊີຄົວເຮືອນ • ລະບົບການເງິນ &amp; ຂໍເບີກຈ່າຍ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --emerald: #0f6b4f;
@@ -1027,6 +1030,9 @@
               <div class="hero-stat-val" id="statPending">0</div>
             </div>
           </div>
+          <div id="statusBreakdownStrip" style="margin-top:12px; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); font-size:12px; color:#ffffff; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px;">
+            <span>ສະຖານະ: ກຳລັງໂຫຼດ...</span>
+          </div>
         </div>
 
         <div class="section-label">
@@ -2024,11 +2030,18 @@ function doPost(e) {
         const inc = yearTx.filter((t) => isIncomeInScope(t, scope)).reduce((s, t) => s + Number(t.amount || 0), 0);
         const exp = yearTx.filter((t) => isExpenseInScope(t, scope)).reduce((s, t) => s + Number(t.amount || 0), 0);
         const pending = allTx.filter(isPendingExpense).length;
+        const approvedExpCount = yearTx.filter((t) => t.type === 'expense' && t.status === 'approved').length;
+        const recordedIncCount = yearTx.filter((t) => t.type === 'income' && (t.status === 'recorded' || t.status === 'approved')).length;
+        const inactiveCount = yearTx.filter((t) => t.status === 'rejected' || t.status === 'cancelled').length;
 
         setText('statBalance', kip(inc - exp));
         setText('statIncome', kip(inc));
         setText('statExpense', kip(exp));
         setText('statPending', String(pending));
+        setHtml(
+          'statusBreakdownStrip',
+          `<span>✅ ບັນທຶກ/ອະນຸມັດແລ້ວ: <strong>${recordedIncCount + approvedExpCount}</strong> ລາຍການ</span><span>⏳ ລໍຖ້າ/ພິຈາລະນາ: <strong>${pending}</strong></span><span>🚫 ປະຕິເສດ/ຍົກເລີກ: <strong>${inactiveCount}</strong></span>`
+        );
 
         const scopedExpenses = yearTx.filter((t) => isExpenseInScope(t, scope));
         const scopedIncomes = yearTx.filter((t) => isIncomeInScope(t, scope));
